@@ -11,6 +11,8 @@ Pod::Spec.new do |s|
   s.author              = { "Tencent" => "weixin-open@qq.com" }
   s.platform            = :ios
   s.source              = { :git => "https://github.com/dxy-developer/DXYWeChatSDK.git", :tag => "v#{s.version}" }
-  s.source_files        = 'SDKExport/*.{h,m}'
-  s.vendored_libraries  = 'SDKExport/libWeChatSDK.a'
+  s.ios.framework       = 'CoreTelephony'
+  s.source_files        = 'sdk/*.{h,m}'
+  s.vendored_libraries  = 'sdk/libWeChatSDK.a'
+
 end
